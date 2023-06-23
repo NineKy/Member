@@ -1,32 +1,31 @@
-package org.example;
+package org.example.domain;
 
 import java.time.LocalDateTime;
 
 public class Admin {
-    private String        id;
-    private String        pw;
-    private String        name;
-    private String        mobileNumber;
+    private String id;
+    private String pw;
+    private String name;
+    private String mobileNumber;
     private LocalDateTime registeredAt = LocalDateTime.now();
 
     public Admin(String id, String pw, String name, String mobileNumber) {
-        this.id           = id;
-        this.pw           = pw;
-        this.name         = name;
+        this.id = id;
+        this.pw = pw;
+        this.name = name;
         this.mobileNumber = mobileNumber;
     }
 
     @Override
     public String toString() {
         return
-               "관리자 id='" + id + '\'' +
-               ", 관리자 pw='" + pw + '\'' +
-               ", 관리자 이름='" + name + '\'' +
-               ", 관리자 전화번호='" + mobileNumber + '\'' +
-               ", 관리자 등록일자=" + registeredAt
-               ;
+                "관리자 id='" + id + '\'' +
+                        ", 관리자 pw='" + pw + '\'' +
+                        ", 관리자 이름='" + name + '\'' +
+                        ", 관리자 전화번호='" + mobileNumber + '\'' +
+                        ", 관리자 등록일자=" + registeredAt
+                ;
     }
-
 
 
     public String getId() {

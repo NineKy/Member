@@ -1,4 +1,4 @@
-package org.example;
+package org.example.domain;
 
 
 import java.time.LocalDateTime;
@@ -12,7 +12,7 @@ public class Member {
 
 
     //G > 일반, S > 우수
-    private String Grade = "G";
+    private String grade = "G";
 
     private int mileage = 0;
     private Admin manager;
@@ -31,7 +31,7 @@ public class Member {
         this.pw           = pw;
         this.memberName   = memberName;
         this.mobileNumber = mobileNumber;
-        Grade             = grade;
+        grade = grade;
         this.mileage      = mileage;
         this.manager      = manager;
     }
@@ -43,7 +43,7 @@ public class Member {
                    ", 사용자 비밀번호='" + pw + '\'' +
                    ", 사용자 이름='" + memberName + '\'' +
                    ", 사용자 전화번호='" + mobileNumber + '\'' +
-                   ", 사용자 등급(G-일반, S-우수)='" + Grade + '\'' +
+                   ", 사용자 등급(G-일반, S-우수)='" + grade + '\'' +
                    ", 마일리지 금액=" + mileage+
                    ", 등록일자=" + registeredAt;
 
@@ -58,7 +58,7 @@ public class Member {
                                 ", 사용자 pw='" + indexMasking(2, pw) + '\'' +
                                 ", 사용자 이름='" + allMasking(memberName) + '\'' +
                                 ", 사용자 전화번호='" + allMasking(mobileNumber) + '\'' +
-                                ", 사용자 등급(G-일반, S-우수)='" + allMasking(Grade) + '\'' +
+                                ", 사용자 등급(G-일반, S-우수)='" + allMasking(grade) + '\'' +
                                 ", 마일리지 금액=" + allMasking(String.valueOf(mileage)) +
                                 ", 등록일자=" + allMasking(registeredAt.format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss")));
 
@@ -121,11 +121,11 @@ public class Member {
     }
 
     public String getGrade() {
-        return Grade;
+        return grade;
     }
 
     public void setGrade(String grade) {
-        Grade = grade;
+        grade = grade;
     }
 
     public int getMileage() {

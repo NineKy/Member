@@ -1,10 +1,14 @@
-package org.example;
+package org.example.view;
+
+import org.example.MemberService;
+import org.example.domain.Admin;
+import org.example.domain.Member;
 
 import static java.lang.System.exit;
 
 import java.util.Scanner;
 
-public class View {
+public class mainView {
 
     public void init(){
         MemberService memberService = new MemberService();
@@ -17,12 +21,14 @@ public class View {
     public void unLoginView(Scanner sc, MemberService memberService){
         boolean isLogin = false;
         while(!isLogin){
+            System.out.println("=========회원 관리 메뉴=========");
+            System.out.println("============================");
             System.out.println("1. 로그인");
             System.out.println("2. 회원가입");
             System.out.println("3. 이름으로 아이디찾기");
             System.out.println("4. 아이디로 비밀번호찾기");
             System.out.println("0. 프로그램 종료");
-
+            System.out.println("============================");
 
             int cmd = sc.nextInt();
             switch (cmd){
@@ -85,7 +91,7 @@ public class View {
                     String findId = sc.next();
                     String foundPw = memberService.getMemberPwFromId(findId);
                     if(foundPw != null){
-                        System.out.println(findId + "<< 아이디로 등록된 비밀번호 :" + foundPw + "입니다");
+                        System.out.println(findId + "<< 아이디로 등록된 비밀번호 " + foundPw + "입니다");
                     }else{
                         System.out.println(findId + "아이디으로 등록된 비밀번호는 없습니다!");
                     }
