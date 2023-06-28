@@ -7,6 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //test
+        //test2
         mainView mainView = new mainView();
         mainView.init();
 
