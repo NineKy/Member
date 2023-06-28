@@ -14,10 +14,11 @@ public class Member {
     //G > 일반, S > 우수
     private String grade = "G";
 
-    private int mileage = 0;
+    private Integer mileage = 0;
     private Admin manager;
 
     private LocalDateTime registeredAt = LocalDateTime.now();
+
 
     public Member(String id, String pw, String memberName, String mobileNumber) {
         this.id           = id;

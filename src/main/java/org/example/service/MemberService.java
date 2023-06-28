@@ -1,7 +1,9 @@
-package org.example;
+package org.example.service;
 
 import org.example.domain.Admin;
+import org.example.domain.Animal;
 import org.example.domain.Member;
+import org.example.domain.Person;
 
 import java.util.Arrays;
 import java.util.List;
@@ -17,6 +19,28 @@ public class MemberService {
             new Admin("admin2", "asdf", "나나나", "01022222222"),
             new Admin("admin3", "zxcv", "다다다", "0103333")
     );
+
+    /**
+     *
+     * 접근제어자 리턴타입(아무거나) 함수명(넣는값-단일or다수){
+     *         컴퓨터한테 시킬 일
+     *                 ~~
+     *                         ~~
+     *                                 ~~
+     *         뱉는값(=리턴값)
+     *     }
+     *
+     */
+
+    public Animal animalFactory(String name){
+        //객체타입 객체이름 = new 생성자
+        Animal kdshim = new Animal();
+        kdshim.setName(name);
+
+        Person test = new Person();
+
+        return kdshim;
+    }
 
 
     public Member getMemeber(String id, String pw) {

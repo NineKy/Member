@@ -1,6 +1,6 @@
 package org.example.view;
 
-import org.example.MemberService;
+import org.example.service.MemberService;
 import org.example.domain.Admin;
 import org.example.domain.Member;
 
